@@ -204,6 +204,11 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+# 启用调试符号
+set(CMAKE_BUILD_TYPE Debug)
+
+# 添加调试选项
+add_compile_options(-g -O0)
 
 add_executable(talker src/talker.cpp)
 target_link_libraries(talker ${catkin_LIBRARIES})
